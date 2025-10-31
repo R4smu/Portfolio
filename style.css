@@ -39,7 +39,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Header y footer fijos */
+
 header, footer {
     flex-shrink: 0;
     width: 100%;
@@ -49,6 +49,21 @@ header, footer {
 
 header {
     height: 20vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.header-img-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 footer {
