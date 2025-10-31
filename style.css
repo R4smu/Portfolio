@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --col-primario: #F1E0C5;
+    --col-secundario: #FB798D;
+    --col-acento: #55DDD4;
+    --col-p-texto: #404E4D;
+    --col-s-texto: #4E0919;
+    --col-a-texto: #146661;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header y footer fijos */
+header, footer {
+    flex-shrink: 0;
+    width: 100%;
+    background: var(--col-secundario);
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+header {
+    height: 20vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: var(--col-primario);
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+}
+
+.titulo-proyectos {
+    font-size: 3rem;
+    color: var(--col-s-texto);
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.proyectos-container {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 0.375rem;
+    column-gap: 1rem;
+}
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proyecto .caja {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: var(--col-acento);
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+.proyecto .caja:hover {
+    transform: scale(1.05);
+}
+
+.nombre-proyecto {
+    margin-top: 0.625rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--col-p-texto);
+    text-align: center;
+}
+
+
+/* Ordenador */
+@media (min-width: 1025px) {
+    .proyectos-container {
+        grid-template-columns: repeat(4, 7.5rem);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .proyectos-container {
+        grid-template-columns: repeat(2, 7.5rem);
+    }
+}
+
+/* Móvil: */
+@media (max-width: 412px) {
+    .proyectos-container {
+        grid-template-columns: repeat(2, 7.5rem);
+    }
+
+    .titulo-proyectos {
+        font-size: 2rem;
+    }
+}
