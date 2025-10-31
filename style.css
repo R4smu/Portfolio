@@ -91,6 +91,7 @@ main {
     text-align: center;
 }
 
+/* ===================== PROYECTO ===================== */
 .proyectos-container {
     display: grid;
     grid-auto-flow: row;
@@ -112,10 +113,19 @@ main {
     transition: transform 0.3s ease;
 }
 
+.img-caja {
+    width: 100%;
+    height: 100%;
+    background-color: var(--col-primario);
+    object-fit: cover;
+    display: block;
+}
+
 .caja:hover {
     transform: scale(1.05);
 }
 
+/* ===================== TEXTO PROYECTO ===================== */
 .nombre-proyecto {
     font-family: 'Laisha', sans-serif;
     margin-top: 0.625rem;
