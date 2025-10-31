@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Aestera';
+    src: url('fonts/aestera.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Laisha';
+    src: url('fonts/laisha.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,9 +68,9 @@ main {
 }
 
 .titulo-proyectos {
-    font-size: 3rem;
+    font-family: 'Aestera', 'Albert Sans';
+    font-size: 2.5rem;
     color: var(--col-s-texto);
-    margin-bottom: 0.75rem;
     text-align: center;
 }
 
@@ -87,11 +101,20 @@ main {
 }
 
 .nombre-proyecto {
-    margin-top: 0.625rem;
+    font-family: 'Leisha', 'Albert Sans';
+    margin-top: 0.625rem; 
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: normal;
     color: var(--col-p-texto);
     text-align: center;
+}
+
+.nombre-proyecto a {
+    font-family: 'Leisha', 'Albert Sans';
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 
