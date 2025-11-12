@@ -75,7 +75,7 @@ main {
     box-shadow: 0 1px 0 rgba(9, 30, 66, .1);
     position: relative;
     border: solid var(--color-tarjeta-borde) 1px;
-    min-height: 7vh; 
+    min-height: 5vh; 
     transition: 
         background-color 0.2s ease, 
         box-shadow 0.2s ease;
