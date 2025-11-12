@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tablero Kanban</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Kanban</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="kanban-columna">
+            <div class="columna-header">
+                <h2>Todo</h2>
+            </div>
+            
+            <div class="tarjeta">
+                <p>Terminar la tarea 2 de cliente: Lorem ipsum dolor sit amet consectetur adipiscing elit. Pariatur sequi cumque nihil beatae provident quasquam velit, magnam fuga rerum odit a aperiam recusandae. Adipisci temporibus sed nesciunt laboriosam vel.</p>
+                <span class="cerrar-icono">&times;</span>
+            </div>
+
+            <div class="tarjeta">
+                <p>Terminar la tarea 3 de cliente: Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <span class="cerrar-icono">&times;</span>
+            </div>
+
+            <div class="tarjeta">
+                <p>Terminar la tarea 2 de diseño</p>
+                <span class="cerrar-icono">&times;</span>
+            </div>
+            
+            <div class="tarjeta">
+                <p>Terminar la tarea 1 de servidor: Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <span class="cerrar-icono">&times;</span>
+            </div>
+
+            <div class="add-tarjeta-container">
+                <input type="text" placeholder="Introduce un título">
+                <div class="add-tarjeta-container-botones">
+                    <button class="add-boton">Añadir tarjeta</button>
+                    <span class="cerrar-icono">&times;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="kanban-columna">
+            <div class="columna-header">
+                <h2>Doing</h2>
+            </div>
+            
+            <div class="tarjeta">
+                <p>Terminar la tarea 1 de cliente: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima dicta ullam unde! Quasi eos magnam debitis impedit? Cupiditate aspernore</p>
+                <span class="cerrar-icono">&times;</span>
+            </div>
+
+            <p class="add-texto">+ Añade una tarjeta</p>
+        </div>
+
+        <div class="kanban-columna">
+            <div class="columna-header">
+                <h2>Done</h2>
+            </div>
+
+            <p class="add-texto">+ Añade una tarjeta</p>
+        </div>
+    </main>
+</body>
+</html>

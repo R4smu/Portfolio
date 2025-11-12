@@ -1,0 +1,182 @@
+:root {
+    --color-fondo: #a5a5e1;
+    --color-columna-header: #dcd7f0;
+    --color-tarjeta: #ffffff;
+    --color-tarjeta-borde: #a1a1a1; 
+    --color-boton: #5050eb;
+    --color-boton-hover: #4040d0;
+    --color-icono-cerrar-hover: #c0c0c0;
+    --color-anadir-hover: #e0e0e0;
+}
+
+/* Estructura */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--color-fondo);
+    padding: 5px 20px 5px 20px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Main */
+main {
+    display: flex;
+    padding: 10px 20px 20px 20px;
+    gap: 20px;
+}
+
+/* Columnas */
+.kanban-columna {
+    background-color: var(--color-tarjeta);
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Column Header*/
+.columna-header {
+    background-color: var(--color-columna-header);
+    margin: 10px 10px 5px 10px;
+    padding: 5px 10px 5px; 
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    border: solid var(--color-tarjeta-borde) 1px;
+}
+
+.columna-header h2 {
+    font-size: 1.375em;
+    font-weight: 600;
+    justify-self: center;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    margin: 5px 10px;
+    padding: 10px 20px 10px 20px; 
+    border-radius: 5px;
+    cursor: grab;
+    font-size: 0.9em;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, .1);
+    position: relative;
+    border: solid var(--color-tarjeta-borde) 1px;
+    min-height: 7vh; 
+    transition: 
+        background-color 0.2s ease, 
+        box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    background-color: var(--color-columna-header);
+    padding: 10px 20px 10px 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Icono de cerrar */
+.tarjeta .cerrar-icono {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.tarjeta:hover .cerrar-icono {
+    opacity: 1; 
+}
+
+.tarjeta .cerrar-icono:hover {
+    background-color: var(--color-icono-cerrar-hover);
+}
+
+/* Texto "Añade una tarjeta" */
+.add-texto {
+    padding: 10px 15px; 
+    margin: 0 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: var(--color-tarjeta);
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.add-texto:hover {
+    background-color: var(--color-anadir-hover);
+}
+
+/* Botón "Añadir tarjeta" */
+.add-tarjeta-container {
+    margin: 5px 10px;
+    background-color: var(--color-tarjeta);
+    display: flex;
+    flex-direction: column;
+}
+
+.add-tarjeta-container input[type="text"] {
+    height: 8vh;
+    border: 1px solid var(--color-tarjeta-borde);
+    padding: 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    font-size: 0.7em;
+}
+
+.add-tarjeta-container input[type="text"]::placeholder {
+    color: var(--color-tarjeta-borde);
+    opacity: 1;
+}
+
+.add-tarjeta-container .add-tarjeta-container-botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botón añadir tarjeta */
+.add-boton {
+    background-color: var(--color-boton);
+    color: var(--color-tarjeta);
+    padding: 6px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.add-boton:hover {
+    background-color: var(--color-boton-hover);
+}
+
+/* Icono cerrar en añadir tarjeta */
+.add-tarjeta-container .cerrar-icono {
+    position: static;
+    font-size: 1.5em; 
+    cursor: pointer;
+    padding: 5px; 
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.add-tarjeta-container .cerrar-icono:hover {
+    background-color: var(--color-icono-cerrar-hover);
+}
